@@ -1,25 +1,59 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import Header from './components/Header'
+// import Headerdeux from './components/Headerdeux'
+// import Footer from './components/Footer'
+import Carde from './components/Carde'
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams
+} from "react-router-dom";
+import  Acceuil from './views/Acceuil';
+import  Details from './views/Details';
+import  Action from './views/Action';
 
 function App() {
+
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <div>
+      /* <Header />
+      
+      <Headerdeux />
+
+
+
+      <Carde />
+
+<Footer /> */
+
+
+   <Router>
+            <>
+
+       <Switch>
+         <Route exact path="/">
+       <Acceuil />
+         </Route>
+         <Route path="/Details/:id">
+          <Details/>
+         </Route>
+         <Route path="/Action">
+          <Action/>
+          
+         </Route>
+        
+       </Switch>
+     </>
+   </Router> 
+  
+  
+    // </div>
   );
 }
 
