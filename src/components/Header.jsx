@@ -50,8 +50,8 @@ const Header = () =>{
      <Link to ="/Genre"> <Nav.Link href="#link">Genre</Nav.Link></Link>
       <NavDropdown title="Film" id="basic-nav-dropdown" className="couleurdefond">
       <Link to ="/Action"> <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item></Link>
-        <NavDropdown.Item href="#action/3.2">Romantique</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Horreur</NavDropdown.Item>
+        {/* <NavDropdown.Item href="#action/3.2">Romantique</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.3">Horreur</NavDropdown.Item> */}
         <NavDropdown.Divider />
         <NavDropdown.Item href="#action/3.4">Tout le film</NavDropdown.Item>
       </NavDropdown>

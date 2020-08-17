@@ -68,18 +68,38 @@ input{
 
 @media screen and (max-width: 360px){
   .gridsecondaire{
-     background: white;
-   // padding-left: 7%;
+    background: white;
+  // padding-left: 7%;
     width: 100% !important;
-    padding-left: 10%;
-    padding-right: 7%;
-    margin-top: 20px;
-    padding-top: 10px;
- }
- .taillecard{
-  // width: 100px !important;
-  height: 175px !important;
-  // border: 1px solid red;
+   //  padding-left: 10px;
+   // padding-right: 7%;
+   margin-top: 60px;
+   padding-top: 10px;
+}
+.divpagination{
+ // width: 70% !important;
+ // margin-right: 30%;
+ text-align: center;
+}
+.taillecard{
+ width: 230px !important;
+ height: 370px !important;
+ // border: 1px solid red;
+}
+.imputrecherche{
+ height: 60px;
+ width: 100%;
+ position: fixed;
+ margin-bottom: 70px;
+ z-index: 5;
+ background: #091322;
+ margin-bottom: 25px;
+}
+input{
+ //  margin-left: 20px;
+ //  margin-right: 20px;
+ //  margin-right: 170px;
+ 
 
 }
 }

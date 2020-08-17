@@ -6,7 +6,7 @@ import styled from 'styled-components'
 
 const Foot = styled.div`
 .pied{
-    // width: 100%;
+     width: 100%;
     height: 80px;
     //  border-top: 1px solid black;
     background: #091322;
