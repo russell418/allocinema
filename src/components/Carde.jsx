@@ -7,30 +7,86 @@ import { Link } from 'react-router-dom';
  import Header from '../components/Header'
  import styled from 'styled-components'
 
-//  import Pagination  from './Pagination'
-//  import Headerdeux from '../components/Headerdeux'
-
-
 
 const Div = styled.div`
 
-   // background:  #e2cd0a;
-//    background:  black;
+.gridsecondaire{
+    background: #091322;
+  // padding-left: 7%;
+  // width: 90%;
+   padding-left: 10%;
+   padding-right: 7%;
+   margin-top: 20px;
+   padding-top: 10px;
+}
+.divpagination{
+  text-align: center;
+}
 
-//   height: 70px;
-//   padding-top: 15px;
-//   padding-left: 150px;
-//   padding-right: 150px;
-//   position: fixed;
-//   z-index: 26;
-//   width: 100%;
-// `
+
+
+@media screen and (max-width: 411px){
+  .gridsecondaire{
+     background: white;
+   // padding-left: 7%;
+     width: 100% !important;
+    //  padding-left: 10px;
+    // padding-right: 7%;
+    margin-top: 60px;
+    padding-top: 10px;
+ }
+ .divpagination{
+  // width: 70% !important;
+  // margin-right: 30%;
+  text-align: center;
+}
+.taillecard{
+  width: 230px !important;
+  height: 370px !important;
+  // border: 1px solid red;
+}
+.imputrecherche{
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  margin-bottom: 70px;
+  z-index: 5;
+  background: #091322;
+  margin-bottom: 25px;
+}
+input{
+  //  margin-left: 20px;
+  //  margin-right: 20px;
+  //  margin-right: 170px;
+  
+ 
+}
+}
+
+
+
+
+@media screen and (max-width: 360px){
+  .gridsecondaire{
+     background: white;
+   // padding-left: 7%;
+    width: 100% !important;
+    padding-left: 10%;
+    padding-right: 7%;
+    margin-top: 20px;
+    padding-top: 10px;
+ }
+ .taillecard{
+  // width: 100px !important;
+  height: 175px !important;
+  // border: 1px solid red;
+
+}
+}
+  `
 const Span = styled(Input)`
 
-// border: 2px solid red;
 border-radius: 100px ;
-// position: fixed;
-// margin-bottom: 70px;
 `
 
 const Carde = () => {
@@ -66,7 +122,8 @@ const recherche = (text) => {
 }
   return ( 
     <div>
-   <Header />   
+   <Header />  
+ 
       <Div>
        <p>mama</p>
   <Span fluid icon='search' className="recherche"
@@ -74,47 +131,56 @@ const recherche = (text) => {
   className="inputrecherche" 
    />
   
-   </Div>
+  
     <div className="imputrecherche">
 <input type="text" className="inputlongeur" placeholder="faites les recherches de vos films"  onChange={(e) =>recherche(e.target.value)} />
       {/* <Button variant="outline-success" onClick={recherche}>Search</Button> */}
       </div>
-      <br />
-   <br />
-   <div className="cardeconteneur">
+        {/* <br />
+   <br /> */}
+   <div >
+
+   <Grid className="gridsecondaire">
    {cinema.map((film) =>( 
-      <Card className="taillecard">
+      <Grid.Column mobile={8} tablet={4} computer={4} >
+       <Card className="taillecard">
 
-         <Link to={"/Details/"+ film.id}>  
-      <Image className="photocarde" src={film.poster_path === null?"https://upload.wikimedia.org/wikipedia/commons/e/e6/Pas_d%27image_disponible.svg":  "http://image.tmdb.org/t/p/w300" +film.poster_path } />
-         </Link>
-      <Card.Content>
-        <Card.Header><h4>Film</h4></Card.Header>
-      
+<Link to={"/Details/"+ film.id}>  
+<Image className="photocarde" src={film.poster_path === null?"https://upload.wikimedia.org/wikipedia/commons/e/e6/Pas_d%27image_disponible.svg":  "http://image.tmdb.org/t/p/w300" +film.poster_path } />
+</Link>
+<Card.Content >
+<Card.Header><h4>Film</h4></Card.Header>
+<Card.Meta><h5>{film.title}</h5></Card.Meta>
+</Card.Content>
 
-
-   <Card.Meta><h5>{film.title}</h5></Card.Meta>
-      </Card.Content>
-    </Card>
-    ))}
- 
-     
-     {/* </div>  */}
+</Card>
+<br />
+      </Grid.Column>
+   ))}
+    </Grid>
 </div>
+
+<div className="divpagination">
 <Pagination
+            // defaultActivePage={1}
+            // activePage={page}
+            // totalPages={data.total_pages}
+            // onPageChange={(e, { activePage }) => {
+            //     setPage(activePage);
+            boundaryRange={0}
             defaultActivePage={1}
             activePage={page}
+            ellipsisItem={null}
+            firstItem={null}
+            lastItem={null}
+            sidlingRange={1}
             totalPages={data.total_pages}
             onPageChange={(e, { activePage }) => {
-                setPage(activePage);
-            //   window.scrollTo(0, 0);
-            }} />
-<div>
-
-
-  
+                   setPage(activePage);
+            }}
+            /> 
 </div>
-
+</Div>
   </div>
 
 )

@@ -12,7 +12,8 @@ import {
   useRouteMatch,
   useParams
 } from "react-router-dom";
-import  Acceuil from './views/Acceuil';
+import  Acceuil from './views/Acceuil'; 
+import Genre from './views/Genre'
 import  Details from './views/Details';
 import  Action from './views/Action';
 
@@ -39,6 +40,9 @@ function App() {
        <Switch>
          <Route exact path="/">
        <Acceuil />
+         </Route>
+         <Route path="/Genre">
+       <Genre />
          </Route>
          <Route path="/Details/:id">
           <Details/>

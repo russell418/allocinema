@@ -3,39 +3,35 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 15px;
-    //  border: 1px solid red;
       margin-left: 10px;
      padding-left: 30px;
      margin-right: 10px;
      margin-top: 40px;
-     background-color: #F8F9FA;
-    //  padding-top: 90px;
-    // margin-bottom: 50px;
-    
+     background-color: #F8F9FA;  
 }
 .taillecard{
     width: 200px !important;
     height: 350px !important;
-    // background-color: black;
-    border: 1px solid red;
-
+    // border: 1px solid red;
+}
+.titrecard{
+  background-color: black;
 }
 .imputrecherche{
   height: 60px;
   width: 100%;
-  background: #091322;
   position: fixed;
   margin-bottom: 70px;
-  z-index: 3;
+  z-index: 5;
 }
 input{
-  width: 70%;
+   width: 70%;
    margin-left: 170px;
    margin-right: 170px;
-  border-radius: 60px;
+   border-radius: 60px;
    height: 40px;
-   margin-top: 10px;
-
+   margin-top: -13px;
+   z-index: 3;
 }
 
 h4{
@@ -49,7 +45,6 @@ h5{
   color: rgb(11, 46, 30);
 }
 .cherche{
-  // background:  #091322;
   background:  #e2cd0a;
   height: 50px;
   padding-top: 15px;
@@ -83,20 +78,78 @@ h5{
        grid-gap: 9px;
     }
   }
+  @media screen and (max-width: 768px) {
+    .cardeconteneur {
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr;
+       grid-gap: 9px;
+    }
+    .pied{
+      width: 100%;
+    }
+    input{
+       margin-left: 0;
+       width: 100%;
+       padding-right: 20px;
+      padding-left: 30px;
+    
+    }
+  }
 
   @media screen and (max-width: 500px) {
     .cardeconteneur {
        display: grid;
        grid-template-columns: 1fr 1fr;
-       margin-left: 2px;
-       grid-gap: 4px;
+       margin-left: 4px;
+       grid-gap: 40px;
+       width: 100%;
+       padding-left: 0;
+       padding-right: 0;
     }
+    input{
+       margin-left: 0;
+       width: 100%;
+        margin-right: 10px;
+    }
+    .entete{
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+    .pied{
+      width: 100%;
+    }
+    .taillecard{
+      width: 180px !important;
+      height: 350px !important;
+      // background-color: black;
+      // border: 1px solid red;
+  
   }
-//   @media screen and (max-width: 320px) {
-//     .cardeconteneur {
-//        display: grid;
-//        grid-template-columns: 1fr 1fr;
-//        margin-left: 0;
-//     }
-//   }
+  }
+
+  @media screen and (max-width: 360px) {
+    .cardeconteneur {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 5px;
+   }
+    .taillecard{
+      width: 164px !important;
+      height: 350px !important;
+  }
+  }
+  @media screen and (max-width: 320px) {
+    .cardeconteneur {
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       margin-left: 1px;
+       margin-right: 1px;
+       grid-gap: 10px;
+    }
+    .taillecard{
+      width: 150px !important;
+      height: 350px !important;
+  }
+  }
   

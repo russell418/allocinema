@@ -35,24 +35,76 @@ width: 100%;
 height: 560px;
 // display: grid;
 // grid-template-columns: 1fr 1fr ;
-
-
 }
+
+
+.containerdetails{
+  background: #091322;
+  color: white;
+  padding-top: 40px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-top: 30px;
+  padding-bottom: 30px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .containerdetails{
+    background: #091322;
+    color: white;
+    padding-top: 20px;
+    // padding-left: 5px;
+    // padding-right: 5px;
+    text-align: center;
+    margin-top: 110px;
+    padding-bottom: 30px;
+    // margin-bottom: 90px;
+  }
+  h1{
+    color: #00FEE6;
+    //  margin-top: 80px;
+  }
+}
+
+@media screen and (max-width: 411px) {
+  .containerdetails{
+    background: #091322;
+    color: white;
+    padding-top: 10px;
+    // padding-left: 5px;
+    // padding-right: 5px;
+    text-align: center;
+    margin-top: 10px;
+    padding-bottom: 30px;
+  }
+  h1{
+    color: #00FEE6;
+     margin-top: 80px;
+  }
+  .image{
+        // position: center;
+        // margin-left: 200px;
+        margin-bottom: 40px;
+    }
+}
+
+
 // .containertitre{
 //     margin-left: 40px;
 //     }
-    .image{
-        position: center;
-        margin-left: 200px;
-    }
+    // .image{
+    //     position: center;
+    //     margin-left: 200px;
+    // }
     .image {
       width: 300px;
-      height: 200px;
+      height: 180px;
     }
-    h1{
-      color: white;
-      margin-top: 30px;
-    }
+    // h1{
+    //   color: #00FEE6;
+    //   margin-top: 30px;
+    // }
     h3{
       margin-top: 50px;
     }
@@ -89,104 +141,41 @@ useEffect(() =>{
 }, [])
 
   return ( 
-
   
     <Div>
   
-
-
-
-
-
-
-
-
-
-
-
-
    <Header />   
-  <Grid reversed='mobile vertically' className="container">
 
-
+  <Grid reversed='mobile vertically' className="containerdetails">
   <Item.Group>
-   
-
    <Item>
-     <Item.Image size='small' className="image"  style={{width:"350px", height:"200px", marginTop:"20px"}} src={cinema.poster_path === null?"https://upload.wikimedia.org/wikipedia/commons/e/e6/Pas_d%27image_disponible.svg":  "http://image.tmdb.org/t/p/w300" +cinema.poster_path} />
-
+     <div>
+     <Item.Image size='small' className="image"  style={{width:"350px", height:"160px", marginTop:"20px"}} src={cinema.poster_path === null?"https://upload.wikimedia.org/wikipedia/commons/e/e6/Pas_d%27image_disponible.svg":  "http://image.tmdb.org/t/p/w300" +cinema.poster_path} />
+     </div>
      <Item.Content>
        <Item.Header as='a'><h1>{cinema.title}</h1></Item.Header>
        <h3>Genre: {genres.map((genre) => genre.name).join(' / ')}</h3>
           <h3>Description: {cinema.overview === null?<p>pas de description pour ce film</p>:cinema.overview}</h3>
           <h3>Date de sortie: {cinema.release_date}</h3>
-       {/* <Item.Description content={description} /> */}
+       <br />
+       <Link to ="/">  <Button inverted color='blue'>
+        Retour
+      </Button></Link>
      </Item.Content>
    </Item>
-   <Link to ="/">  <Button inverted color='blue'>
-        Blue
-      </Button></Link>
-
  </Item.Group>
 
-
-
-
-
     <Grid.Row className="cotainer">
       <Grid.Column className="containertitre">
-      {/* <h2>{cinema.title}</h2>
-          <p>description de ce film</p>
-      </Grid.Column>
-    </Grid.Row>
-    <Grid.Row className="cotainer">
-      <Grid.Column>
-      <Card className="image">
-    <Image  src={cinema.poster_path === null?"https://upload.wikimedia.org/wikipedia/commons/e/e6/Pas_d%27image_disponible.svg":  "http://image.tmdb.org/t/p/w300" +cinema.poster_path} />
-   
-  </Card>
-      </Grid.Column>
-    </Grid.Row>
-    <Grid.Row className="cotainer">
-      <Grid.Column className="containertitre">
-  <p>{genres.map((genre) => genre.name).join(' : ')}</p>
-          <p>{cinema.overview}</p>
-
-  <p>date de sortie: {cinema.release_date}</p>
-          {/* <p>{production_countries.map((maison) => maison.name).join(' : ')}</p> */}
-          {/* <p>page </p>
-          <br />
-      */}
-        {/* <Link to ="/">  <Button inverted color='blue'>
-        Blue
-      </Button></Link> */} */}
+    
       </Grid.Column>
     </Grid.Row>
   </Grid>
 
-
-{/* <Item /> */}
-
+  {/* <br /> */}
 <Footer />
   </Div>
 )
 }
 
 export default Details
-
-
-{/* <Item.Group>
-    <Item>
-      <Item.Image size='tiny' src={cinema.poster_path === null?"https://upload.wikimedia.org/wikipedia/commons/e/e6/Pas_d%27image_disponible.svg":  "http://image.tmdb.org/t/p/w300" +cinema.poster_path} />
-
-      <Item.Content>
-        <Item.Header>Arrowhead Valley Camp</Item.Header>
-        <Item.Meta>
-          <span className='price'>$1200</span>
-          <span className='stay'>1 Month</span>
-        </Item.Meta>
-        <Item.Description>papa</Item.Description>
-      </Item.Content>
-    </Item>
-    
-  </Item.Group> */}

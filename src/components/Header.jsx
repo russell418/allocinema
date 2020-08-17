@@ -3,6 +3,7 @@ import logop from '../images/logop.jpg'
 import {Form, NavDropdown, Nav , FormControl, Navbar,Button } from 'react-bootstrap'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom';
+import "../Assets/Cardestyle.scss"
 
 const Div = styled.div`
 
@@ -15,12 +16,23 @@ const Div = styled.div`
   position: fixed;
   z-index: 4;
   top: 0;
+  background: red;
+}
+.header{
+  
+}
+couleurdefond{
+  background: red;
+  z-index: 30;
 }
 `
 // color: #00FEE6
 
 const Head = styled(Navbar)`
+background: red;
+
 `
+
    
 
 const Header = () =>{
@@ -28,15 +40,15 @@ const Header = () =>{
         <Div>
 
 <Head bg="light" expand="lg" className="entete">
-  <Navbar.Brand href="#home">
+  <Navbar.Brand href="#home" className="header">
       <img src={logop} alt="logo" className="logoph" />
   </Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
      <Link to ="/"><Nav.Link href="#home">Acceuil</Nav.Link></Link>
-      <Nav.Link href="#link">Serie</Nav.Link>
-      <NavDropdown title="Film" id="basic-nav-dropdown">
+     <Link to ="/Genre"> <Nav.Link href="#link">Genre</Nav.Link></Link>
+      <NavDropdown title="Film" id="basic-nav-dropdown" className="couleurdefond">
       <Link to ="/Action"> <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item></Link>
         <NavDropdown.Item href="#action/3.2">Romantique</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.3">Horreur</NavDropdown.Item>
@@ -56,62 +68,3 @@ const Header = () =>{
 }
 export default Header
 
-
-// import React, { Component } from 'react'
-// import { Input, Menu } from 'semantic-ui-react'
-// import logo from '../images/logo.jpg'
-// import '../Assets/Fichier.scss'
-
-
-
-
-
-// export default class MenuExampleSecondary extends Component {
-//   state = { activeItem: 'home' }
-
-//   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
-
-//   render() {
-//     const { activeItem } = this.state
-
-//     return (
-//        <div className="contenaire">
-//       <Menu secondary className="menu">
-//           <img src={logo} className="logoph"/>
-//            <Menu.Item
-//           img src={logo}
-//         //   name='home'
-//         //   active={activeItem === 'home'}
-//         //   onClick={this.handleItemClick}
-//         />
-//         <Menu.Item
-//           name='home'
-//           active={activeItem === 'home'}
-//           onClick={this.handleItemClick}
-          
-//         />
-//         <Menu.Item
-//           name='messages'
-//           active={activeItem === 'messages'}
-//           onClick={this.handleItemClick}
-//         />
-//         <Menu.Item
-//           name='friends'
-//           active={activeItem === 'friends'}
-//           onClick={this.handleItemClick}
-//         />
-//         <Menu.Menu position='right'>
-//           <Menu.Item>
-//             <Input icon='search' placeholder='Search...' />
-//           </Menu.Item>
-//           <Menu.Item
-//             name='logout'
-//             active={activeItem === 'logout'}
-//             onClick={this.handleItemClick}
-//           />
-//         </Menu.Menu>
-//       </Menu>
-//       </div>
-//     )
-//   }
-// }
