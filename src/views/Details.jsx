@@ -27,32 +27,38 @@ Div{
 // margin-right: 200px;
 // border: 1px solid black;
 // padding-left: 90px;
-// padding-right: 90px;
+// padding-bottom: 20px;
 margin-top: 70px;
-background: #091322;
+// background: #091322;
 color: white;
 width: 100%;
-height: 560px;
+height: 620px;
 // display: grid;
 // grid-template-columns: 1fr 1fr ;
 }
-
+h1{
+      color: #00FEE6;
+       margin-top: 80px;
+      //  margin-left: 20px;
+    }
 
 .containerdetails{
   background: #091322;
   color: white;
   padding-top: 40px;
+  padding-bottom: 20px;
   padding-left: 25px;
   padding-right: 25px;
-  margin-top: 30px;
+   margin-top: 40px;
   padding-bottom: 30px;
+  height: 550px;
 }
 
 
 @media screen and (max-width: 768px) {
   .containerdetails{
     background: #091322;
-    color: white;
+    color: black;
     padding-top: 20px;
     // padding-left: 5px;
     // padding-right: 5px;
@@ -65,71 +71,24 @@ height: 560px;
     color: #00FEE6;
     //  margin-top: 80px;
   }
+  @media screen and (max-width: 411px){
+    .containerdetails{
+       background: #091322;
+    //  padding-left: 10px;
+        // width: 100%;
+        padding: 60px;
+      // padding-right: 7%;
+      margin-top: 120px;
+       padding-top: 30px;
+      height: 800px;
+      // margin-right: 20px;
+      text-align: center;
+   }
+   h3{
+     color: white;
+   }
 }
 
-@media screen and (max-width: 411px) {
-  .containerdetails{
-    background: #091322;
-    color: white;
-    padding-top: 10px;
-    //  padding-left: 20px;
-    // padding-right: 5px;
-    text-align: center;
-    margin-top: 10px;
-    padding-bottom: 30px;
-  }
-  h1{
-    color: #00FEE6;
-     margin-top: 80px;
-    //  margin-left: 20px;
-  }
-  .image{
-        // position: center;
-        // margin-left: 200px;
-        margin-bottom: 250px;
-        margin-left: 33px;
-    }
-}
-
-
-// .containertitre{
-//     margin-left: 40px;
-//     }
-    // .image{
-    //     position: center;
-    //     margin-left: 200px;
-    // }
-    .image {
-      width: 300px;
-      height: 180px;
-    }
-    h1{
-      color: #00FEE6;
-      margin-top: 30px;
-    }
-    h3{
-      margin-top: 50px;
-    }
-    }
-    @media screen and (max-width: 375px) {
-      .containerdetails{
-        background: #091322;
-        color: white;
-        padding-top: 10px;
-        padding-left: 0;
-        padding-right: 0;
-        text-align: center;
-        margin-top: 10px;
-        padding-bottom: 30px;
-        width: 100% !important;
-      }
-      .image{
-        // position: center;
-        // margin-left: 200px;
-        margin-bottom: 280px;
-        // margin-left: 33px;
-    }
-    }
 `
 
 
@@ -170,9 +129,9 @@ useEffect(() =>{
   <Grid reversed='mobile vertically' className="containerdetails">
   <Item.Group>
    <Item>
-     <div>
-     <Item.Image size='small' className="image"  style={{width:"350px", height:"160px", marginTop:"20px"}} src={cinema.poster_path === null?"https://upload.wikimedia.org/wikipedia/commons/e/e6/Pas_d%27image_disponible.svg":  "http://image.tmdb.org/t/p/w300" +cinema.poster_path} />
-     </div>
+   
+     <Item.Image size='small' className="image"  style={{width:"350px", height:"260px", marginTop:"20px", marginBottom: "20px"}} src={cinema.poster_path === null?"https://upload.wikimedia.org/wikipedia/commons/e/e6/Pas_d%27image_disponible.svg":  "http://image.tmdb.org/t/p/w300" +cinema.poster_path} />
+    
      <Item.Content>
        <Item.Header as='a'><h1>{cinema.title}</h1></Item.Header>
        <h3>Genre: {genres.map((genre) => genre.name).join(' / ')}</h3>
@@ -186,14 +145,10 @@ useEffect(() =>{
    </Item>
  </Item.Group>
 
-    <Grid.Row className="cotainer">
-      <Grid.Column className="containertitre">
-    
-      </Grid.Column>
-    </Grid.Row>
   </Grid>
 
-  {/* <br /> */}
+  {/* <br />
+  <br /> */}
 <Footer />
   </Div>
 )

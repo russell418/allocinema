@@ -19,10 +19,10 @@ const Div = styled.div`
   height: 450px;
   width: 100%;
 }
-.photocarousel{
-  width: 100%;
-  height: 400px;
-}
+// .photocarousel{
+//   width: 100%;
+//   height: 700px;
+// }
 
 `
 

@@ -21,6 +21,59 @@ const Div = styled.div`
 .divpagination{
   text-align: center;
 }
+
+
+
+@media screen and (max-width: 411px){
+  .gridsecondaire{
+     background: #091322;
+  //  padding-left: 10px;
+      // width: 100%;
+    //  padding-left: 60px;
+    // padding-right: 7%;
+    margin-top: 10px;
+    padding-top: 10px;
+    // margin-right: 20px;
+    text-align: center;
+ }
+ .divpagination{
+  // width: 70% !important;
+  // margin-right: 30%;
+  text-align: center;
+}
+.taillecard{
+  width: 280px !important;
+  height: 370px !important;
+  
+  // border: 1px solid red;
+}
+.imputrecherche{
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  margin-bottom: 70px;
+  // z-index: 5;
+  background: #091322;
+  // margin-bottom: 25px;
+}
+input{
+  width: 90%;
+  margin-left: 20px;
+  // margin-right: 170px;
+  border-radius: 60px;
+  height: 40px;
+   margin-top: 10px;
+  // z-index: 3;
+}
+.taillecard{
+  width: 340px !important;
+  height: 350px !important;
+  // border: 1px solid red;
+}
+}
+
+
+
  `
 const Span = styled(Input)`
 
@@ -77,7 +130,7 @@ const recherche = (text) => {
    <Grid className="gridsecondaire">
      <br />
    {Genrefilm.map((film) =>( 
-      <Grid.Column mobile={8} tablet={4} computer={4} >
+      <Grid.Column mobile={16} tablet={4} computer={4} >
        <Card className="taillecard">
 
          <Link to={"/Details/"+ film.id}>  

@@ -6,18 +6,20 @@ import "../Assets/Cardestyle.scss"
 import { Link } from 'react-router-dom';
  import Header from '../components/Header'
  import styled from 'styled-components'
+//  import Font from '../components/Font'
 
 
 const Div = styled.div`
 
 .gridsecondaire{
-    background: #091322;
+    background: #0A1233;
   // padding-left: 7%;
   // width: 90%;
    padding-left: 10%;
    padding-right: 7%;
    margin-top: 20px;
    padding-top: 10px;
+  //  height: 820px;
 }
 .divpagination{
   text-align: center;
@@ -25,15 +27,18 @@ const Div = styled.div`
 
 
 
+
 @media screen and (max-width: 411px){
   .gridsecondaire{
-     background: white;
-   // padding-left: 7%;
-     width: 100% !important;
-    //  padding-left: 10px;
+     background: #091322;
+  //  padding-left: 10px;
+      // width: 100%;
+    //  padding-left: 60px;
     // padding-right: 7%;
     margin-top: 60px;
     padding-top: 10px;
+    // margin-right: 20px;
+    text-align: center;
  }
  .divpagination{
   // width: 70% !important;
@@ -41,8 +46,9 @@ const Div = styled.div`
   text-align: center;
 }
 .taillecard{
-  width: 230px !important;
+  width: 280px !important;
   height: 370px !important;
+  
   // border: 1px solid red;
 }
 .imputrecherche{
@@ -50,16 +56,23 @@ const Div = styled.div`
   width: 100%;
   position: fixed;
   margin-bottom: 70px;
-  z-index: 5;
+  // z-index: 5;
   background: #091322;
-  margin-bottom: 25px;
+  // margin-bottom: 25px;
 }
 input{
-  //  margin-left: 20px;
-  //  margin-right: 20px;
-  //  margin-right: 170px;
-  
- 
+  width: 90%;
+  margin-left: 20px;
+  // margin-right: 170px;
+  border-radius: 60px;
+  height: 40px;
+   margin-top: 10px;
+  // z-index: 3;
+}
+.taillecard{
+  width: 340px !important;
+  height: 350px !important;
+  // border: 1px solid red;
 }
 }
 
@@ -68,9 +81,9 @@ input{
 
 @media screen and (max-width: 360px){
   .gridsecondaire{
-    background: white;
+    background: #091322;
   // padding-left: 7%;
-    width: 100% !important;
+    // width: 100% !important;
    //  padding-left: 10px;
    // padding-right: 7%;
    margin-top: 60px;
@@ -82,7 +95,7 @@ input{
  text-align: center;
 }
 .taillecard{
- width: 230px !important;
+ width: 280px !important;
  height: 370px !important;
  // border: 1px solid red;
 }
@@ -95,13 +108,7 @@ input{
  background: #091322;
  margin-bottom: 25px;
 }
-input{
- //  margin-left: 20px;
- //  margin-right: 20px;
- //  margin-right: 170px;
- 
 
-}
 }
   `
 const Span = styled(Input)`
@@ -158,11 +165,14 @@ const recherche = (text) => {
       </div>
         {/* <br />
    <br /> */}
-   <div >
+   {/* <div > */}
+
+  
 
    <Grid className="gridsecondaire">
+     
    {cinema.map((film) =>( 
-      <Grid.Column mobile={8} tablet={4} computer={4} >
+      <Grid.Column mobile={16} tablet={4} computer={4} >
        <Card className="taillecard">
 
 <Link to={"/Details/"+ film.id}>  
@@ -177,8 +187,13 @@ const recherche = (text) => {
 <br />
       </Grid.Column>
    ))}
+  
     </Grid>
-</div>
+
+
+{/* </div> */}
+
+
 
 <div className="divpagination">
 <Pagination

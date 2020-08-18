@@ -1,7 +1,8 @@
 import React from 'react'
-import { Input } from 'semantic-ui-react'
+import { Input, Header, Segment } from 'semantic-ui-react'
 import styled from 'styled-components'
 import "../Assets/Headerstyle.scss"
+
 
 const Head = styled.div`
 
@@ -27,13 +28,12 @@ inputrecherche{
 
 const Headerdeux = () => (
   <Head>
-    <div className="cherche">
-  <Input fluid icon='search' 
-  placeholder="chercher le titre d'un film" 
-  className="inputrecherche" 
-   />
-  
-  </div>
+<div class="ui inverted menu" style={{background:"black",color:"black", position:"fixed", width:"100%", zIndex:"3", top:"0"}}>
+
+  <a class="item active" style={{color:"black"}}>Home </a>
+  <a class="item">Messages </a>
+  <a class="item">Amis </a>
+</div>
   </Head>
 
 )

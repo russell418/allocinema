@@ -16,22 +16,42 @@ const Div = styled.div`
   position: fixed;
   z-index: 4;
   top: 0;
-  background: red;
+  // background: red;
 }
 .header{
   
 }
 couleurdefond{
   background: red;
-  z-index: 30;
+  z-index: 60;
 }
+
+
+@media screen and (max-width: 411px){
+  
+ .entete{
+  width: 100%;
+  position: fixed;
+  z-index: 55;
+  top: 0;
+  // background: red;
+}
+}
+
 `
 // color: #00FEE6
 
 const Head = styled(Navbar)`
+
 background: red;
 
 `
+const Span = styled(NavDropdown)`
+
+z-index: 77;
+`
+ 
+
 
    
 
@@ -48,13 +68,14 @@ const Header = () =>{
     <Nav className="mr-auto">
      <Link to ="/"><Nav.Link href="#home">Acceuil</Nav.Link></Link>
      <Link to ="/Genre"> <Nav.Link href="#link">Genre</Nav.Link></Link>
-      <NavDropdown title="Film" id="basic-nav-dropdown" className="couleurdefond">
+     <Link to ="/Action"> <Nav.Link href="#link">Action</Nav.Link></Link>
+      {/* <Span title="Film" id="basic-nav-dropdown" className="couleurdefond">
       <Link to ="/Action"> <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item></Link>
-        {/* <NavDropdown.Item href="#action/3.2">Romantique</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Horreur</NavDropdown.Item> */}
+        <NavDropdown.Item href="#action/3.2">Romantique</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.3">Horreur</NavDropdown.Item>
         <NavDropdown.Divider />
         <NavDropdown.Item href="#action/3.4">Tout le film</NavDropdown.Item>
-      </NavDropdown>
+      </Span> */}
     </Nav>
     <Form inline>
       {/* <FormControl type="text" placeholder="Search" className="mr-sm-2" />
