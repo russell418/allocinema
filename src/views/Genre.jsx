@@ -89,7 +89,7 @@ const [data, setData] = useState([]);
 const [page, setPage] = useState(1);
 const  [text, setText] = useState("marveil");
 useEffect(() =>{
-  axios.get(`https://api.themoviedb.org/3/movie/upcoming?api_key=e328b532f3c60b5f93231b4606d40400&language=fr&page=${page}`)
+  axios.get(`https://api.themoviedb.org/3/movie/top_rated?api_key=e328b532f3c60b5f93231b4606d40400&language=fr&page=${page}`)
  .then((res) => {
    setData(res.data);
    setGenrefilm(res.data.results)

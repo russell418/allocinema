@@ -51,7 +51,7 @@ h1{
   padding-right: 25px;
    margin-top: 40px;
   padding-bottom: 30px;
-  height: 550px;
+  height: 610px;
 }
 
 

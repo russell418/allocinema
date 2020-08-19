@@ -30,25 +30,26 @@ p{
     .pied{
        width: 10%;
        height: 80px;
-       background: #0A1322;
+       background: white;
         margin-top: 20px;
         // padding-top: 20px;
         // padding-left: 20px;
-       color: white;
+       color: ;
        text-align: center;
+       color: black;
        
    }
 }
-@media screen and (max-width: 360px){
+@media screen and (max-width: 4110px){
 
     .pied{
        width: 100%;
        height: 80px;
-       background: #0A1322;
+       background: white;
         margin-top: 20px;
         padding-top: 20px;
         // padding-left: 20px;
-       color: white;
+       color: black;
        text-align: center;
 
        

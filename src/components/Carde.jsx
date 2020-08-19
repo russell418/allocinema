@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 const Div = styled.div`
 
 .gridsecondaire{
-    background: #0A1233;
+    background: #0B0F23;
   // padding-left: 7%;
   // width: 90%;
    padding-left: 10%;
@@ -84,7 +84,7 @@ input{
     background: #091322;
   // padding-left: 7%;
     // width: 100% !important;
-   //  padding-left: 10px;
+     padding-left: 40px;
    // padding-right: 7%;
    margin-top: 60px;
    padding-top: 10px;
@@ -107,6 +107,52 @@ input{
  z-index: 5;
  background: #091322;
  margin-bottom: 25px;
+}
+@media screen and (max-width: 414px){
+  .gridsecondaire{
+     background: #091322;
+  //  padding-left: 10px;
+      // width: 100%;
+    //  padding-left: 60px;
+    // padding-right: 7%;
+    margin-top: 60px;
+    padding-top: 10px;
+    // margin-right: 20px;
+    text-align: center;
+ }
+ .divpagination{
+  // width: 70% !important;
+  // margin-right: 30%;
+  text-align: center;
+}
+.taillecard{
+  width: 280px !important;
+  height: 370px !important;
+  
+  // border: 1px solid red;
+}
+.imputrecherche{
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  margin-bottom: 70px;
+  // z-index: 5;
+  background: #091322;
+  // margin-bottom: 25px;
+}
+input{
+  width: 90%;
+  margin-left: 20px;
+  // margin-right: 170px;
+  border-radius: 60px;
+  height: 40px;
+   margin-top: 10px;
+  // z-index: 3;
+}
+.taillecard{
+  width: 340px !important;
+  height: 350px !important;
+  // border: 1px solid red;
 }
 
 }
